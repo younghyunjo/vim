@@ -47,6 +47,7 @@ filetype plugin indent on    " required
 Plugin 'bruno-/vim-man'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-surround'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""" YOUNGHYUN VIM CONFIG """"""""""""""""""""
