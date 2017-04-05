@@ -49,6 +49,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'tomasr/molokai'
+Plugin 'vim-syntastic/syntastic'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""" YOUNGHYUN VIM CONFIG """"""""""""""""""""
@@ -90,7 +91,7 @@ let g:rehash256 = 1
 """""""""""""""""""""""" SYNTASTIC START""""""""""""""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
-"set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
