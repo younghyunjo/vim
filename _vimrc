@@ -48,6 +48,7 @@ Plugin 'bruno-/vim-man'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
+Plugin 'tomasr/molokai'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""" YOUNGHYUN VIM CONFIG """"""""""""""""""""
@@ -58,16 +59,15 @@ set incsearch
 set autoindent
 set cindent
 set smartindent
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""" AIRLINE CONFIG """"""""""""""""""""
-let g:tern_map_keys=1
-let g:airline_theme='papercolor'
+syntax enable
+set t_Co=256
+filetype indent on
+set background=dark
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""" KEY MAP """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F3> <ESC>:cN<CR>
-map <F4> <ESC>:cn<CR>
+"map <F3> <ESC>:cN<CR>
+"map <F4> <ESC>:cn<CR>
 map <F6> <ESC>:gr '\<<C-R><C-W>\>' -R *<CR>
 map <F7> <ESC>:gr '\<<C-R><C-W>\>' `find ./ -name "*.h"`<CR>
 map <F8> <ESC>:gr '\<<C-R><C-W>\>' `find ./ -name "*.c"`<CR>
@@ -75,4 +75,27 @@ vmap <Tab> >gv
 vmap <S-Tab> <gv 
 map <S-k> <ESC>:Man <C-R><C-W> <CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""" AIRLINE CONFIG """"""""""""""""""""
+let g:tern_map_keys=1
+let g:airline_theme='papercolor'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""" COLORSCHEME """"""""""""""""""""
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""" SYNTASTIC START""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
+"set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
